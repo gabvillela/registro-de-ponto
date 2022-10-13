@@ -1,9 +1,10 @@
 <?php
 
-if(!isset($_SESSION)) {
+if(!isset($_SESSION)) { 
     session_start();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,8 +14,6 @@ if(!isset($_SESSION)) {
     <title>Painel</title>
 </head>
 <body>
-    <p>
-        Bem vindo ao Painel, <?php echo $_SESSION['nome']; ?>
-    </p>
+    Bem vindo ao Painel, <? echo $_SESSION['nome']; ?>
 </body>
 </html>
