@@ -43,22 +43,29 @@ md5($senha);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Acesse sua conta</h1>
-    <form action="" method="POST">
-        <p>
-            <label>Email</label>
-            <input type="text" name="email">
-        </p>
-        <p>
-            <label>Senha</label>
-            <input type="text" name="senha">
-        </p>
-        <p>
-            <button type="submit">Entrar</button>
-        </p>
-    </form>
+    <main>
+    <div class="left-login">
+            <h1>Login</h1>
+            <img src="taken-animate.svg" alt="imagem/svg" class="left-login-image">
+        </div>
+        <div class="right-login">
+            <form action="" method="POST" class="right-login">
+                <div class="card-login">
+                    <div class="text-field">
+                        <label>Email</label>
+                        <input type="text" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="text-field">
+                        <label>Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                        <button type="submit" class="btn-login">Entrar</button>
+                    </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
