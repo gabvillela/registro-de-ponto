@@ -4,6 +4,7 @@ if(!isset($_SESSION)) {
     session_start();
 }
 
+date_default_timezone_set('America/Sao_Paulo');
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +16,26 @@ if(!isset($_SESSION)) {
     <title>Painel</title>
 </head>
 <body>
-    Bem vindo ao Painel, <? echo $_SESSION['nome']; ?>
+    <h2>Bem vindo ao Painel</h2>
 
-    <p></p>
+    <a href="registrar-ponto.php">Registrar</a>
+
+    <p id="horario"><?php echo date("d/m/Y H:i:s") ?></p>
+
+    <script>
+
+        var apHorario =document.getElementById("horario");
+
+        function atualizarHorario (){
+          var data = new Date().toLocaleString("pt-br", {
+            timeZone: "America/Sao_Paulo"
+           });
+           var formatarData = data.replace(", ", " - ");
+           apHorario.innerHTML = formatarData;
+        }
+
+        setInterval(atualizarHorario, 1000);
+    </script>
+    
 </body>
 </html>

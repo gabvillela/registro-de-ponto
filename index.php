@@ -23,8 +23,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                 session_start();
             }
 
-            $_SESSION['1'] == $usuarios['usuario1'];
-            $_SESSION['2'] == $usuarios['usuario2'];
+            $_SESSION['1'] == $usuario['usuario1'];
+            $_SESSION['2'] == $usuario['usuario2'];
 
             header("Location: painel.php");
 
@@ -33,7 +33,6 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         } 
     }
 }
-
 md5($senha);
 ?>
 
@@ -59,7 +58,6 @@ md5($senha);
         <p>
             <button type="submit">Entrar</button>
         </p>
-
     </form>
 </body>
 </html>
