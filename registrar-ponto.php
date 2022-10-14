@@ -10,31 +10,25 @@ include_once "conexao.php";
 
 $id_usuario = 1;
 
-$query_ponto = "SELECT id AS id_ponto, saida_intervalo, retorno_intervalo, saida
+$query_ponto = "SELECT id, saida_intervalo, retorno_intervalo, saida
     FROM pontos
     WHERE usuario_id =:usuario_id
     ORDER BY id DESC
     LIMIT 1";
 
 $result_ponto = $conn->prepare($query_ponto);
-
+//Substituir o link da QUERY pelo valor
 $result_ponto->bindParam(':usuario_id', $id_usuario);
-
+// Executar a QUERY
 $result_ponto->execute();
-
+// Verificar se encontrou algum registro no db
 if(($result_ponto) and ($result_ponto->rowCOunt() != 0)) {
+    // Leitura do registro
     $row_ponto = $result_ponto->fetch(PDO::FETCH_ASSOC);
     var_dump($row_ponto);
-}else {
-    echo "Nenhum ponto encontrado! <br>";
+    // Nome da chave no array
+    extract($row_ponto);
 }
-
-
-
-
-    
-   
-
 ?>
 
 <!DOCTYPE html>
