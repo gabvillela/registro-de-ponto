@@ -6,7 +6,7 @@
 - PHP 8.1
 - CSS 3.0
 ## Características
-- Criar Usuário
+- Criar Usuários
 - Autenticação
 
 ## Requerimentos
