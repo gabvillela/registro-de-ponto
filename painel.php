@@ -3,6 +3,7 @@
 if(!isset($_SESSION)) { 
     session_start();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -15,5 +16,9 @@ if(!isset($_SESSION)) {
 </head>
 <body>
     Bem vindo ao Painel, <? echo $_SESSION['nome']; ?>
+
+    <p>
+        <a href="logout.php">Sair</a>
+    </p>
 </body>
 </html>
