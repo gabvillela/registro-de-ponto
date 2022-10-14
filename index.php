@@ -17,14 +17,14 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $quantidade = $sql_query->num_rows;
 
         if($quantidade == 1) {
-            $usuario = $sql_query->fetch_assoc();
+            $usuarios = $sql_query->fetch_assoc();
 
             if(!isset($_SESSION)) { 
                 session_start();
             }
 
-            $_SESSION['1'] == $usuario['usuario1'];
-            $_SESSION['2'] == $usuario['usuario2'];
+            $_SESSION['1'] == $usuarios['usuario1'];
+            $_SESSION['2'] == $usuarios['usuario2'];
 
             header("Location: painel.php");
 

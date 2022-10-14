@@ -17,8 +17,6 @@ if(!isset($_SESSION)) {
 <body>
     Bem vindo ao Painel, <? echo $_SESSION['nome']; ?>
 
-    <p>
-        <a href="logout.php">Sair</a>
-    </p>
+    <p></p>
 </body>
 </html>
